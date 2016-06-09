@@ -13,6 +13,8 @@ describe Kiriban do
       222  | false
       1122 | false
       3000 | true
+      -200 | true
+      -123 | false
     end
 
     with_them do
@@ -34,6 +36,8 @@ describe Kiriban do
       222  | true
       1122 | false
       3000 | false
+      -222 | true
+      -100 | false
     end
 
     with_them do
