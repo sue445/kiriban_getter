@@ -6,7 +6,7 @@ end
 
 module KiribanBenchmark
   refine Integer do
-    def digit
+    def digit_1
       digit = 1
 
       num = self.abs
@@ -17,6 +17,12 @@ module KiribanBenchmark
 
       digit
     end
+
+    def digit_2
+      self.abs.to_s.length
+    end
+
+    alias_method :digit, :digit_1
 
     def kiriban_1?
       !!(self.abs.to_s =~ /^[1-9]0+$/)
@@ -45,6 +51,17 @@ module KiribanBenchmark
       num % zorome1 == 0
     end
   end
+end
+
+Benchmark.ips do |x|
+  using KiribanBenchmark
+
+  x.config(time: 5, warmup: 2)
+
+  x.report("digit_1") { rand_num.digit_1 }
+  x.report("digit_2") { rand_num.digit_2 }
+
+  x.compare!
 end
 
 Benchmark.ips do |x|
