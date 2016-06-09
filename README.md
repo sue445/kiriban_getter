@@ -1,8 +1,7 @@
 # Kiriban
+Check number whether kiriban (キリ番)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/kiriban`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Add `#kiriban?` and `#zorome?` methods to `Integer`
 
 ## Installation
 
@@ -21,8 +20,29 @@ Or install it yourself as:
     $ gem install kiriban
 
 ## Usage
+```ruby
+require "kiriban"
 
-TODO: Write usage instructions here
+using Kiriban
+
+100.kiriban?
+#=> true
+
+101.kiriban?
+#=> false
+
+111.kiriban?
+#=> false
+
+111.zorome?
+#=> true
+
+2222.zorome?
+#=> true
+
+2223.zorome?
+#=> false
+```
 
 ## Development
 
@@ -32,7 +52,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/kiriban.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sue445/kiriban.
 
 
 ## License
