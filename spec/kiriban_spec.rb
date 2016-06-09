@@ -44,4 +44,27 @@ describe Kiriban do
       it { should eq expected }
     end
   end
+
+  describe "#digit" do
+    subject { number.digit }
+
+    using Kiriban
+    using RSpec::Parameterized::TableSyntax
+
+    where(:number, :expected) do
+      1    | 1
+      10   | 2
+      11   | 2
+      200  | 3
+      222  | 3
+      1122 | 4
+      3000 | 4
+      -222 | 3
+      -100 | 3
+    end
+
+    with_them do
+      it { should eq expected }
+    end
+  end
 end

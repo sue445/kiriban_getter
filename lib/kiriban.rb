@@ -3,12 +3,32 @@ require "kiriban/version"
 module Kiriban
   refine Integer do
     def kiriban?
-      !!(self.abs.to_s =~ /^[1-9]0+$/)
+      num = self.abs
+      return false if num < 10
+
+      i = 10 ** (digit - 1)
+      num % i == 0
     end
 
     def zorome?
-      return false if self.abs < 10
-      self.abs.to_s.each_char.map(&:itself).uniq.count == 1
+      num = self.abs
+      return false if num < 10
+
+      # generate number which all digit is 1
+      zorome1 = digit.times.inject(0) { |n| n * 10 + 1 }
+      num % zorome1 == 0
+    end
+
+    def digit
+      digit = 1
+
+      num = self.abs
+      while num >= 10
+        digit += 1
+        num /= 10
+      end
+
+      digit
     end
   end
 end
