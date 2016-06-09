@@ -1,5 +1,9 @@
 require "kiriban/version"
 
 module Kiriban
-  # Your code goes here...
+  refine Integer do
+    def kiriban?
+      !!(self.to_s =~ /^[1-9]0+$/)
+    end
+  end
 end
