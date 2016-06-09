@@ -22,7 +22,7 @@ module KiribanBenchmark
       self.abs.to_s.length
     end
 
-    alias_method :digit, :digit_1
+    alias_method :digit, :digit_2
 
     def kiriban_1?
       !!(self.abs.to_s =~ /^[1-9]0+$/)

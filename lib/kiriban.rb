@@ -20,15 +20,7 @@ module Kiriban
     end
 
     def digit
-      digit = 1
-
-      num = self.abs
-      while num >= 10
-        digit += 1
-        num /= 10
-      end
-
-      digit
+      self.abs.to_s.length
     end
   end
 end
