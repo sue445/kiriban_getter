@@ -67,4 +67,28 @@ describe Kiriban do
       it { should eq expected }
     end
   end
+
+  describe "#kiriban?" do
+    subject { number.kiriban? }
+
+    using Kiriban
+    using RSpec::Parameterized::TableSyntax
+
+    where(:number, :expected) do
+      1    | false
+      10   | true
+      11   | true
+      200  | true
+      222  | true
+      1122 | false
+      3000 | true
+      -200 | true
+      -123 | false
+      -333 | true
+    end
+
+    with_them do
+      it { should eq expected }
+    end
+  end
 end

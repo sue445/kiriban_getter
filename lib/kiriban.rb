@@ -22,5 +22,9 @@ module Kiriban
     def digit
       self.abs.to_s.length
     end
+
+    def kiriban?
+      kuraiban? || zorome?
+    end
   end
 end
