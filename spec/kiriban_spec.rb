@@ -1,6 +1,6 @@
 describe Kiriban do
-  describe "#kiriban?" do
-    subject { number.kiriban? }
+  describe "#kuraiban?" do
+    subject { number.kuraiban? }
 
     using Kiriban
     using RSpec::Parameterized::TableSyntax

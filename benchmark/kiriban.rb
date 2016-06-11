@@ -24,11 +24,11 @@ module KiribanBenchmark
 
     alias_method :digit, :digit_2
 
-    def kiriban_1?
+    def kuraiban_1?
       !!(self.abs.to_s =~ /^[1-9]0+$/)
     end
 
-    def kiriban_2?
+    def kuraiban_2?
       num = self.abs
       return false if num < 10
 
@@ -69,8 +69,8 @@ Benchmark.ips do |x|
 
   x.config(time: 5, warmup: 2)
 
-  x.report("kiriban_1?") { rand_num.kiriban_1? }
-  x.report("kiriban_2?") { rand_num.kiriban_2? }
+  x.report("kuraiban_1?") { rand_num.kuraiban_1? }
+  x.report("kuraiban_2?") { rand_num.kuraiban_2? }
 
   x.compare!
 end
