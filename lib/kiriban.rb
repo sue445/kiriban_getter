@@ -2,7 +2,7 @@ require "kiriban/version"
 
 module Kiriban
   refine Integer do
-    def kiriban?
+    def kuraiban?
       num = self.abs
       return false if num < 10
 
@@ -21,6 +21,10 @@ module Kiriban
 
     def digit
       self.abs.to_s.length
+    end
+
+    def kiriban?
+      kuraiban? || zorome?
     end
   end
 end

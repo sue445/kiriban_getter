@@ -1,7 +1,7 @@
 # Kiriban
-Check number whether kiriban (キリ番)
+Check number whether **Kiriban (キリ番)**
 
-Add `#kiriban?` and `#zorome?` methods to `Integer`
+Add `#kiriban?`, `#kuraiban?` and `#zorome?` methods to `Integer`
 
 ## Installation
 
@@ -25,6 +25,7 @@ require "kiriban"
 
 using Kiriban
 
+# kiriban?
 100.kiriban?
 #=> true
 
@@ -32,6 +33,17 @@ using Kiriban
 #=> false
 
 111.kiriban?
+#=> true
+
+# kuraiban?
+100.kuraiban?
+#=> true
+
+101.kuraiban?
+#=> false
+
+# zorome?
+111.kuraiban?
 #=> false
 
 111.zorome?
