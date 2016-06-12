@@ -19,6 +19,9 @@ module Kiriban
       num % zorome1 == 0
     end
 
+    alias_method :repdigit?, :zorome?
+    alias_method :monodigit?, :zorome?
+
     def digit
       self.abs.to_s.length
     end
