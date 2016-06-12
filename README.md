@@ -24,8 +24,12 @@ Or install it yourself as:
 require "kiriban"
 
 using Kiriban
+```
 
-# kiriban?
+### #kiriban? (キリ番?)
+`#kiriban?` is `#kuraiban?` or `#zorome?`
+
+```ruby
 100.kiriban?
 #=> true
 
@@ -34,18 +38,25 @@ using Kiriban
 
 111.kiriban?
 #=> true
+```
 
-# kuraiban?
+### #kuraiban? (位番?)
+```ruby
 100.kuraiban?
 #=> true
 
 101.kuraiban?
 #=> false
 
-# zorome?
 111.kuraiban?
 #=> false
 
+2000.kuraiban?
+#=> true
+```
+
+### #zorome? (ゾロ目?)
+```ruby
 111.zorome?
 #=> true
 
