@@ -1,6 +1,6 @@
-require "kiriban/version"
+require "kiriban_getter/version"
 
-module Kiriban
+module KiribanGetter
   refine Integer do
     def kuraiban?
       num = self.abs
@@ -9,6 +9,7 @@ module Kiriban
       i = 10 ** (digit - 1)
       num % i == 0
     end
+    alias_method :zeroban, :kuraiban?
 
     def zorome?
       num = self.abs

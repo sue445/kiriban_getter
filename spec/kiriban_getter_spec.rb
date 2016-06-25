@@ -1,8 +1,8 @@
-describe Kiriban do
+describe KiribanGetter do
   describe "#kuraiban?" do
     subject { number.kuraiban? }
 
-    using Kiriban
+    using KiribanGetter
     using RSpec::Parameterized::TableSyntax
 
     where(:number, :expected) do
@@ -25,7 +25,7 @@ describe Kiriban do
   describe "#zorome?" do
     subject { number.zorome? }
 
-    using Kiriban
+    using KiribanGetter
     using RSpec::Parameterized::TableSyntax
 
     where(:number, :expected) do
@@ -48,7 +48,7 @@ describe Kiriban do
   describe "#digit" do
     subject { number.digit }
 
-    using Kiriban
+    using KiribanGetter
     using RSpec::Parameterized::TableSyntax
 
     where(:number, :expected) do
@@ -71,7 +71,7 @@ describe Kiriban do
   describe "#kiriban?" do
     subject { number.kiriban? }
 
-    using Kiriban
+    using KiribanGetter
     using RSpec::Parameterized::TableSyntax
 
     where(:number, :expected) do
