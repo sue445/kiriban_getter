@@ -9,6 +9,7 @@ module KiribanGetter
       i = 10 ** (digit - 1)
       num % i == 0
     end
+    alias_method :zeroban, :kuraiban?
 
     def zorome?
       num = self.abs
