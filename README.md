@@ -63,6 +63,9 @@ using KiribanGetter
 #=> true
 ```
 
+Also aliased as: `#zeroban?`
+
+
 ### #zorome? (ゾロ目?)
 ```ruby
 111.zorome?
