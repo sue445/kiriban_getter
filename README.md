@@ -3,6 +3,9 @@ Check number whether **Kiriban (キリ番)**
 
 Add `#kiriban_getter?`, `#kuraiban?` and `#zorome?` methods to `Integer`
 
+## Requirements
+* Ruby 2.1+
+
 ## Installation
 
 Add this line to your application's Gemfile:
