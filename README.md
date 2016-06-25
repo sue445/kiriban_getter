@@ -1,7 +1,7 @@
 # KiribanGetter
 Check number whether **Kiriban (キリ番)**
 
-Add `#kiriban_getter?`, `#kuraiban?` and `#zorome?` methods to `Integer`
+Add `#kiriban?`, `#kuraiban?` and `#zorome?` methods to `Integer`
 
 [![Gem Version](https://badge.fury.io/rb/kiriban_getter.svg)](https://badge.fury.io/rb/kiriban_getter)
 [![Build Status](https://travis-ci.org/sue445/zatsu_monitor.svg?branch=master)](https://travis-ci.org/sue445/zatsu_monitor)
