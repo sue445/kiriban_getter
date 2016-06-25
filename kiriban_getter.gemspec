@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'kiriban/version'
+require 'kiriban_getter/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "kiriban"
-  spec.version       = Kiriban::VERSION
+  spec.name          = "kiriban_getter"
+  spec.version       = KiribanGetter::VERSION
   spec.authors       = ["sue445"]
   spec.email         = ["sue445@sue445.net"]
 
   spec.summary       = %q{Check number whether kiriban}
   spec.description   = %q{Check number whether kiriban}
-  spec.homepage      = "https://github.com/sue445/kiriban"
+  spec.homepage      = "https://github.com/sue445/kiriban_getter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

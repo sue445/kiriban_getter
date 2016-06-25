@@ -1,6 +1,6 @@
-require "kiriban/version"
+require "kiriban_getter/version"
 
-module Kiriban
+module KiribanGetter
   refine Integer do
     def kuraiban?
       num = self.abs
