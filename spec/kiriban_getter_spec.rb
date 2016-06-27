@@ -52,6 +52,7 @@ describe KiribanGetter do
     using RSpec::Parameterized::TableSyntax
 
     where(:number, :expected) do
+      0    | 1
       1    | 1
       10   | 2
       11   | 2
