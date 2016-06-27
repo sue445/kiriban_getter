@@ -6,6 +6,7 @@ end
 
 module KiribanBenchmark
   refine Integer do
+    # legacy
     def digit_1
       digit = 1
 
@@ -18,16 +19,19 @@ module KiribanBenchmark
       digit
     end
 
+    # v0.1.0
     def digit_2
       self.abs.to_s.length
     end
 
     alias_method :digit, :digit_2
 
+    # legacy
     def kuraiban_1?
       !!(self.abs.to_s =~ /^[1-9]0+$/)
     end
 
+    # v0.1.0
     def kuraiban_2?
       num = self.abs
       return false if num < 10
@@ -36,12 +40,14 @@ module KiribanBenchmark
       num % i == 0
     end
 
+    # legacy
     def zorome_1?
       num = self.abs
       return false if num < 10
       num.to_s.each_char.map(&:itself).uniq.count == 1
     end
 
+    # v0.1.0
     def zorome_2?
       num = self.abs
       return false if num < 10
