@@ -1,3 +1,8 @@
+languages:
+  Ruby: true
+  JavaScript: true
+  PHP: true
+  Python: true
 exclude_paths:
-- spec/**/*
-- benchmark/*
+- "spec/**/*"
+- "benchmark/kiriban_getter.rb"
