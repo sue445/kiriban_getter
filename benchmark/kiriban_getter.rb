@@ -1,7 +1,7 @@
 require "benchmark/ips"
 
 def rand_num
-  rand(1000000)
+  rand(-10_000_000..10_000_000)
 end
 
 module KiribanBenchmark
