@@ -29,6 +29,14 @@ module KiribanBenchmark
       Math.log10(self.abs).to_i + 1
     end
 
+    def digit_4
+      Math.log10(self.abs).to_i + 1
+    rescue FloatDomainError
+      # Math.log10(0).to_i
+      # #=> FloatDomainError: -Infinity
+      1
+    end
+
     alias_method :digit, :digit_2
 
     # legacy
@@ -87,6 +95,7 @@ Benchmark.ips do |x|
   x.report("digit_1 (legacy)") { rand_num.digit_1 }
   x.report("digit_2 (v0.1.0)") { rand_num.digit_2 }
   x.report("digit_3")          { rand_num.digit_3 }
+  x.report("digit_4")          { rand_num.digit_4 }
 
   x.compare!
 end
