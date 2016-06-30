@@ -37,7 +37,7 @@ module KiribanBenchmark
       1
     end
 
-    alias_method :digit, :digit_2
+    alias_method :digit, :digit_4
 
     # legacy
     def kuraiban_1?
