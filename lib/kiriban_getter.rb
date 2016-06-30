@@ -24,7 +24,11 @@ module KiribanGetter
     alias_method :monodigit?, :zorome?
 
     def digit
-      self.abs.to_s.length
+      Math.log10(self.abs).to_i + 1
+    rescue FloatDomainError
+      # Math.log10(0).to_i
+      # #=> FloatDomainError: -Infinity
+      1
     end
 
     def kiriban?
