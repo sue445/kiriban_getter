@@ -4,6 +4,10 @@ def rand_num
   rand(-10_000_000..10_000_000)
 end
 
+def ruby_2_4?
+  Gem::Version.create(RUBY_VERSION) >= Gem::Version.create("2.4.0")
+end
+
 module KiribanBenchmark
   refine Integer do
     # legacy
@@ -38,8 +42,7 @@ module KiribanBenchmark
       1
     end
 
-    if Gem::Version.create(RUBY_VERSION) >= Gem::Version.create("2.4.0")
-      # ruby2.4+
+    if ruby_2_4?
       def digit_5
         self.abs.digits.count
       end
@@ -78,7 +81,7 @@ module KiribanBenchmark
       num % zorome1 == 0
     end
 
-    if Gem::Version.create(RUBY_VERSION) >= Gem::Version.create("2.4.0")
+    if ruby_2_4?
       def zorome_3?
         self.abs.digits.uniq.count == 1
       end
@@ -110,7 +113,10 @@ Benchmark.ips do |x|
   x.report("digit_2 (v0.1.0)")   { rand_num.digit_2 }
   x.report("digit_3")            { rand_num.digit_3 }
   x.report("digit_4 (v0.1.1)")   { rand_num.digit_4 }
-  x.report("digit_5 (ruby2.4+)") { rand_num.digit_5 }
+
+  if ruby_2_4?
+    x.report("digit_5 (ruby2.4+)") { rand_num.digit_5 }
+  end
 
   x.compare!
 end
@@ -134,7 +140,9 @@ Benchmark.ips do |x|
 
   x.report("zorome_1? (legacy)")     { rand_num.zorome_1? }
   x.report("zorome_2? (v0.1.0)")     { rand_num.zorome_2? }
-  x.report("zorome_3? (ruby2.4+)")   { rand_num.zorome_3? }
+  if ruby_2_4?
+    x.report("zorome_3? (ruby2.4+)") { rand_num.zorome_3? }
+  end
   x.report("zoroban? (kiriban gem)") { rand_num.zoroban? }
 
   x.compare!
