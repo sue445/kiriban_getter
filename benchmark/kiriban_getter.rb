@@ -38,6 +38,13 @@ module KiribanBenchmark
       1
     end
 
+    if Gem::Version.create(RUBY_VERSION) >= Gem::Version.create("2.4.0")
+      # ruby2.4+
+      def digit_5
+        self.abs.digits.count
+      end
+    end
+
     alias_method :digit, :digit_4
 
     # legacy
@@ -93,10 +100,11 @@ Benchmark.ips do |x|
 
   x.config(time: 5, warmup: 2)
 
-  x.report("digit_1 (legacy)") { rand_num.digit_1 }
-  x.report("digit_2 (v0.1.0)") { rand_num.digit_2 }
-  x.report("digit_3")          { rand_num.digit_3 }
-  x.report("digit_4 (v0.1.1)") { rand_num.digit_4 }
+  x.report("digit_1 (legacy)")   { rand_num.digit_1 }
+  x.report("digit_2 (v0.1.0)")   { rand_num.digit_2 }
+  x.report("digit_3")            { rand_num.digit_3 }
+  x.report("digit_4 (v0.1.1)")   { rand_num.digit_4 }
+  x.report("digit_5 (ruby2.4+)") { rand_num.digit_5 }
 
   x.compare!
 end
