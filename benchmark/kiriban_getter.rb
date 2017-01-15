@@ -78,6 +78,12 @@ module KiribanBenchmark
       num % zorome1 == 0
     end
 
+    if Gem::Version.create(RUBY_VERSION) >= Gem::Version.create("2.4.0")
+      def zorome_3?
+        self.abs.digits.uniq.count == 1
+      end
+    end
+
     # via.
     # * https://github.com/osyo-manga/gem-kiriban/blob/v0.1.0/lib/kiriban/core.rb,
     # * https://github.com/osyo-manga/gem-kiriban/blob/v0.1.0/lib/kiriban/core_ext.rb
@@ -128,6 +134,7 @@ Benchmark.ips do |x|
 
   x.report("zorome_1? (legacy)")     { rand_num.zorome_1? }
   x.report("zorome_2? (v0.1.0)")     { rand_num.zorome_2? }
+  x.report("zorome_3? (ruby2.4+)")   { rand_num.zorome_3? }
   x.report("zoroban? (kiriban gem)") { rand_num.zoroban? }
 
   x.compare!
