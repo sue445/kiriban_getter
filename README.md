@@ -7,7 +7,6 @@ Add `#kiriban?`, `#kuraiban?` and `#zorome?` methods to `Integer`
 [![Build Status](https://travis-ci.org/sue445/zatsu_monitor.svg?branch=master)](https://travis-ci.org/sue445/zatsu_monitor)
 [![Code Climate](https://codeclimate.com/github/sue445/kiriban_getter/badges/gpa.svg)](https://codeclimate.com/github/sue445/kiriban_getter)
 [![Coverage Status](https://coveralls.io/repos/github/sue445/kiriban_getter/badge.svg?branch=master)](https://coveralls.io/github/sue445/kiriban_getter?branch=master)
-[![Dependency Status](https://gemnasium.com/badges/github.com/sue445/kiriban_getter.svg)](https://gemnasium.com/github.com/sue445/kiriban_getter)
 
 ## Requirements
 * Ruby 2.1+
