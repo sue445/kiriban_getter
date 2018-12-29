@@ -5,7 +5,7 @@ rvm:
   - 2.3
   - 2.4
   - 2.5
-  - 2.6.0
+  - 2.6
   - ruby-head
 before_install:
   - gem install bundler --no-document
@@ -27,6 +27,11 @@ notifications:
 matrix:
   allow_failures:
     - rvm: ruby-head
+  include:
+    - rvm: 2.6
+      env: RUBYOPT="--jit"
+    - rvm: ruby-head
+      env: RUBYOPT="--jit"
 env:
   global:
     - CC_TEST_REPORTER_ID=8f450c1a3ba1c7589d8bf7d937f53e540f23e2c875650a61fc36f1e6682a5ab4
