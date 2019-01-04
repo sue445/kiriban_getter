@@ -4,7 +4,7 @@ Check number whether **Kiriban (キリ番)**
 Add `#kiriban?`, `#kuraiban?` and `#zorome?` methods to `Integer`
 
 [![Gem Version](https://badge.fury.io/rb/kiriban_getter.svg)](https://badge.fury.io/rb/kiriban_getter)
-[![Build Status](https://travis-ci.org/sue445/zatsu_monitor.svg?branch=master)](https://travis-ci.org/sue445/zatsu_monitor)
+[![Build Status](https://travis-ci.org/sue445/kiriban_getter.svg?branch=master)](https://travis-ci.org/sue445/kiriban_getter)
 [![Code Climate](https://codeclimate.com/github/sue445/kiriban_getter/badges/gpa.svg)](https://codeclimate.com/github/sue445/kiriban_getter)
 [![Coverage Status](https://coveralls.io/repos/github/sue445/kiriban_getter/badge.svg?branch=master)](https://coveralls.io/github/sue445/kiriban_getter?branch=master)
 
