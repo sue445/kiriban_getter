@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/master/CHANGELOG.md"
+  spec.metadata["documentation_uri"] = "https://sue445.github.io/kiriban_getter/"
   spec.metadata["rubygems_mfa_required"] = "true"
 
   spec.required_ruby_version = ">= 2.1.0"
@@ -34,4 +35,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec-parameterized"
   spec.add_development_dependency "simplecov"
   spec.add_development_dependency "unparser", ">= 0.4.5"
+  spec.add_development_dependency "yard"
 end
