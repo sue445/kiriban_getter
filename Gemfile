@@ -13,3 +13,8 @@ if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.5.0")
   # NOTE: simplecov v0.19.0+ requires Ruby 2.5+
   gem "simplecov", "< 0.19.0"
 end
+
+if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("2.7.0")
+  # term-ansicolor 1.9.0+ doesn't work on Ruby < 2.7
+  gem "term-ansicolor", "< 1.9.0"
+end
