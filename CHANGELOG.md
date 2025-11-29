@@ -1,4 +1,12 @@
 # Change Log
+## Unreleased
+[Full Changelog](https://github.com/sue445/kiriban_getter/compare/v0.1.3...master)
+
+## [v0.1.3](https://github.com/sue445/kiriban_getter/releases/tag/v0.1.3) (2025-11-29)
+[Full Changelog](https://github.com/sue445/kiriban_getter/compare/v0.1.2...v0.1.3)
+
+* Release gem from GitHub Actions
+  * https://github.com/sue445/kiriban_getter/pull/60
 
 ## [v0.1.2](https://github.com/sue445/kiriban_getter/tree/v0.1.2) (2021-11-20)
 [Full Changelog](https://github.com/sue445/kiriban_getter/compare/v0.1.1...v0.1.2)
