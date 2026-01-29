@@ -1,4 +1,4 @@
-name: Publish gem to rubygems.org
+name: Publish gem to rubygems.org (test)
 
 on:
   workflow_dispatch:
