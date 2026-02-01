@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   release:
-    uses: sue445/test-shared-workflows/.github/workflows/release_gem.yml@main
+    uses: sue445/workflows/.github/workflows/release_gem.yml@main
     with:
       repo_name: sue445/kiriban_getter
       gem_name:  kiriban_getter
