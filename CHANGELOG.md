@@ -1,6 +1,12 @@
 # Change Log
 ## Unreleased
-[Full Changelog](https://github.com/sue445/kiriban_getter/compare/v0.1.3...master)
+[Full Changelog](https://github.com/sue445/kiriban_getter/compare/v0.1.4...master)
+
+## [v0.1.4](https://github.com/sue445/kiriban_getter/releases/tag/v0.1.4) (2026-08-23)
+[Full Changelog](https://github.com/sue445/kiriban_getter/compare/v0.1.3...v0.1.4)
+
+* Migrate release_gem workflow to sue445/workflows (Also testing the gem release)
+  * https://github.com/sue445/kiriban_getter/pull/103
 
 ## [v0.1.3](https://github.com/sue445/kiriban_getter/releases/tag/v0.1.3) (2025-11-29)
 [Full Changelog](https://github.com/sue445/kiriban_getter/compare/v0.1.2...v0.1.3)
