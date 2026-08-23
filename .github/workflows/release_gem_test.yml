@@ -9,3 +9,6 @@ jobs:
     with:
       repo-name: sue445/kiriban_getter
       gem-name:  kiriban_getter
+    permissions:
+      contents: write
+      id-token: write
